@@ -9,7 +9,7 @@ resource "aws_vpc" "tfb" {
 }
 
 resource "aws_internet_gateway" "tfb" {
-  vpc_id = aws_vpc.tfb.vpc_id
+  vpc_id = aws_vpc.tfb.vpc.id
 
   tags = {
     Name = "${var.name}-igw"
